@@ -110,10 +110,5 @@ Vagrant.configure("2") do |config|
     make && make install
     echo  "export PATH=/opt/vim#{VIM_VERSION}/bin/:$PATH" >> ~vagrant/.profile
 
-    # "It's up to you."
-    # curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-    # sh ./installer.sh ~/.cache/dein
-
-
   SHELL
 end

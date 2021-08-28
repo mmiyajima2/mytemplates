@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-PYTHON_VERSION = '3.9.0'
+PYTHON_VERSION = '3.9.6'
 VIM_VERSION = '8.2'
 
 
@@ -16,8 +16,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "bento/ubuntu-20.04"
-  config.disksize.size = '30GB'
+  config.vm.box = "ubuntu/focal64"
+  #config.disksize.size = '65GB'
   # config.vm.box_url = ENV['box_url']
 
   # Disable automatic box update checking. If you disable this, then
@@ -61,7 +61,7 @@ Vagrant.configure("2") do |config|
     vb.name = 'py39my8'
  
     # Customize the amount of memory on the VM:
-    vb.memory = "2048"
+    vb.memory = "3072"
 
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
@@ -78,7 +78,7 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive
     chmod 0600 ~vagrant/.ssh/*
 
-    curl -sL https://deb.nodesource.com/setup_12.x | bash -
+    curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
     apt-get install -y nodejs
     npm install -g @vue/cli
 

@@ -1,8 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-PYTHON_VERSION = '3.9.6'
-VIM_VERSION = '8.2'
+PYTHON_VERSION = '3.9.6!FIXME'
+VIM_VERSION = '8.2!FIXME'
 
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "FIX ME"
+  config.vm.network "private_network", ip: "!FIXME"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = false
-    vb.name = 'py39my8'
+    vb.name = 'py39my8!FIXME'
  
     # Customize the amount of memory on the VM:
     vb.memory = "3072"
@@ -78,9 +78,9 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive
     chmod 0600 ~vagrant/.ssh/*
 
-    curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-    apt-get install -y nodejs
-    npm install -g @vue/cli
+    curl -fsSL https://deb.nodesource.com/setup_14.x!FIXME | sudo -E bash -
+    apt-get install -y nodejs!FIXME
+    npm install -g @vue/cli!FIXME
 
     apt-get update
 

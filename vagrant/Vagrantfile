@@ -79,8 +79,8 @@ Vagrant.configure("2") do |config|
     chmod 0600 ~vagrant/.ssh/*
 
     curl -fsSL https://deb.nodesource.com/setup_14.x!FIXME | sudo -E bash -
-    apt-get install -y nodejs!FIXME
-    npm install -g @vue/cli!FIXME
+    apt-get install -y nodejs
+    npm install -g @vue/cli
 
     apt-get update
 
